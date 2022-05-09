@@ -53,12 +53,8 @@ class _ChipsState extends State<Chips> {
             onPressed: () {
               setState(() {
                 widget.isChecked = !widget.isChecked;
-                if(widget.isLike){
-                  likeOptions[widget.index] = !likeOptions[widget.index];
-                }
-                else{
-                  hateOptions[widget.index] = !hateOptions[widget.index];
-                }
+                widget.isLike ?
+                  likeOptions[widget.index] = !likeOptions[widget.index] : hateOptions[widget.index] = !hateOptions[widget.index];
               });
             },
             child: Text('${widget.chipName}'),
