@@ -7,13 +7,12 @@ class Chips extends StatefulWidget {
 
   Chips({Key? key,
     required this.chipName,
-    required this.isChecked,
     required this.isLike,
     required this.index})
       : super(key: key);
 
   final String chipName;
-  bool isChecked;
+  bool isChecked = false;
   final bool isLike;
   final int index;
 

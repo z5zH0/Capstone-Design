@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../resources.dart';
 import 'Chips.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Option extends StatelessWidget {
   const Option({Key? key}) : super(key: key);
@@ -43,11 +45,11 @@ class Option extends StatelessWidget {
                 spacing: 6,
                 alignment: WrapAlignment.start,
                 children: [
-                  Chips(chipName: '비건', isChecked: false, isLike: true, index: 0),
-                  Chips(chipName: '건강식', isChecked: false, isLike: true, index: 1),
-                  Chips(chipName: '다이어트식', isChecked: false, isLike: true, index: 2),
-                  Chips(chipName: '육류', isChecked: false, isLike: true, index: 3),
-                  Chips(chipName: '어류', isChecked: false, isLike: true, index: 4),
+                  Chips(chipName: '비건', isLike: true, index: 0),
+                  Chips(chipName: '건강식', isLike: true, index: 1),
+                  Chips(chipName: '다이어트식', isLike: true, index: 2),
+                  Chips(chipName: '육류', isLike: true, index: 3),
+                  Chips(chipName: '어류', isLike: true, index: 4),
                 ],
               ),
             ),
@@ -70,16 +72,22 @@ class Option extends StatelessWidget {
                 spacing: 10,
                 runSpacing: 10,
                 children: [
-                  Chips(chipName: '우유', isChecked: false, isLike: false, index: 0),
-                  Chips(chipName: '새우', isChecked: false, isLike: false, index: 1),
-                  Chips(chipName: '고칼로리', isChecked: false, isLike: false, index: 2),
-                  Chips(chipName: '어패류', isChecked: false, isLike: false, index: 3),
-                  Chips(chipName: '생선', isChecked: false, isLike: false, index: 4),
-                  Chips(chipName: '매운 맛', isChecked: false, isLike: false, index: 5),
-                  Chips(chipName: '오븐 필요', isChecked: false, isLike: false, index: 6),
+                  Chips(chipName: '우유', isLike: false, index: 0),
+                  Chips(chipName: '새우', isLike: false, index: 1),
+                  Chips(chipName: '고칼로리', isLike: false, index: 2),
+                  Chips(chipName: '어패류', isLike: false, index: 3),
+                  Chips(chipName: '생선', isLike: false, index: 4),
+                  Chips(chipName: '매운 맛', isLike: false, index: 5),
+                  Chips(chipName: '오븐 필요', isLike: false, index: 6),
                 ],
               ),
             ),
+            SizedBox(height: 100),
+            ElevatedButton(
+                onPressed: (){
+                  
+                },
+                child: Text('테스트'))
           ],
         ),
       ),

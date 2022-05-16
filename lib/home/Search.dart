@@ -15,6 +15,7 @@ class _searchState extends State<search> {
       height: 60,
       child: TextField(
           showCursor: false,
+          style: TextStyle(color: Colors.white),
           decoration: InputDecoration(
               hintText: '메뉴, 재료로 레시피 검색하기',
               hintStyle: TextStyle(color: Colors.white),

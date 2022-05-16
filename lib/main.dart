@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'home/Home.dart';
 import 'myFridge/MyFridge.dart';
 import 'option/Option.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(const MyApp());
 }
 
