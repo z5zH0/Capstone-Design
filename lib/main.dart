@@ -1,15 +1,21 @@
+
 import 'package:flutter/material.dart';
 import 'home/Home.dart';
 import 'myFridge/MyFridge.dart';
 import 'option/Option.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'recipe_data.dart';
 
+void main() async {
 
-void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+  await initializeDefault();
   runApp(const MyApp());
+}
+
+Future<void> initializeDefault() async {
+  FirebaseApp app = await Firebase.initializeApp();
+  print('Initialized default app $app');
 }
 
 class MyApp extends StatelessWidget {
@@ -20,6 +26,7 @@ class MyApp extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent,

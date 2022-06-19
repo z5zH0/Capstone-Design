@@ -1,5 +1,9 @@
+import 'package:capstone_design_2022_spring/mainSearch.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 
 class search extends StatefulWidget {
   const search({Key? key}) : super(key: key);
@@ -9,11 +13,25 @@ class search extends StatefulWidget {
 }
 
 class _searchState extends State<search> {
+
+  final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 60,
       child: TextField(
+        controller: _controller,
+        textInputAction: TextInputAction.go,
+          onSubmitted: (value) {
+          var searchQuery = _controller.text;
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) {
+              return mainSearch(ingName: searchQuery);
+            }),
+          );
+          },
           showCursor: false,
           style: TextStyle(color: Colors.white),
           decoration: InputDecoration(

@@ -12,5 +12,5 @@ bool noFish = false;
 bool noSpicy = false;
 bool noOven = false;
 
-List likeOptions = [isVegan, isDiet, isHealthy, isMeat, isFish];
-List hateOptions = [noMilk, noShrimp, noHighCalorie, noClam, noFish, noSpicy, noOven];
+var likeOptions = [isVegan, isDiet, isHealthy, isMeat, isFish];
+var hateOptions = [noMilk, noShrimp, noHighCalorie, noClam, noFish, noSpicy, noOven];
