@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
   async {
     Tflite.close();
     String res;
-    res=(await Tflite.loadModel(model: "assets/model0619.tflite",labels: "assets/labels0619.txt"))!;
+    res=(await Tflite.loadModel(model: "assets/model0620-1.tflite",labels: "assets/labels0620-1.txt"))!;
     print("Models loading status: $res");
   }
 

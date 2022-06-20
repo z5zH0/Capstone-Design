@@ -148,7 +148,8 @@ class _recipeSearchState extends State<recipeSearch> {
             !recipeData[i]['RCP_PARTS_DTLS'].contains('돼지')&&
             !recipeData[i]['RCP_PARTS_DTLS'].contains('갈비')&&
             !recipeData[i]['RCP_PARTS_DTLS'].contains('오리')&&
-            !recipeData[i]['RCP_PARTS_DTLS'].contains('베이컨'))
+            !recipeData[i]['RCP_PARTS_DTLS'].contains('베이컨')&&
+            !recipeData[i]['RCP_PARTS_DTLS'].contains('햄'))
         {
           temp.add(i);
         }
